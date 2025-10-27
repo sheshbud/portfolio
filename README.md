@@ -4,7 +4,7 @@
 
 Hi! I'm Shesh Budhabhatti, a sophomore at Northeastern University pursuing a dual major in **Computer Science (Cybersecurity)** and **Business Administration (Finance)**. This portfolio showcases my technical projects in security, software development, and problem-solving.
 
-## 🔐 Cybersecurity Projects
+## Cybersecurity Projects
 
 ### Discretionary Access Control & CTF Challenges
 
@@ -55,7 +55,7 @@ Completed OverTheWire Bandit levels covering:
 
 ---
 
-## 💻 Software Engineering Projects
+## Software Engineering Projects
 
 ### LightEmAll - Puzzle Game
 **Fundies 2 | Java**
