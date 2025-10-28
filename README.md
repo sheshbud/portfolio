@@ -1,4 +1,6 @@
-# portfolio
+cd ../ctf-challenges
+touch README.md
+code README.md# portfolio
 
 # Cybersecurity & Software Engineering Portfolio
 
