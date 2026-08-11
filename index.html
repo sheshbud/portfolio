@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shesh Budhabhatti — Cybersecurity & Software Engineering</title>
-<meta name="description" content="Portfolio of Shesh Budhabhatti — Cybersecurity and Business Administration, Northeastern University.">
+<title>Shesh Budhabhatti: Cybersecurity & Software Engineering</title>
+<meta name="description" content="Portfolio of Shesh Budhabhatti, Cybersecurity and Business Administration, Northeastern University.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
   <div class="wrap">
     <span class="logo">Shesh Budhabhatti</span>
     <nav>
-      <a href="#featured">Featured</a>
       <a href="#experience">Experience</a>
+      <a href="#featured">Featured</a>
       <a href="#projects">Projects</a>
       <a href="#security">Security</a>
       <a href="#skills">Skills</a>
@@ -27,13 +27,67 @@
   <div class="wrap">
     <img class="profile-photo" src="profile.jpg" alt="Shesh Budhabhatti">
     <h1>Shesh Budhabhatti</h1>
-    <p class="tagline">Cybersecurity &amp; Software Engineering — Northeastern University</p>
+    <p class="tagline">Cybersecurity &amp; Software Engineering at Northeastern University</p>
     <p class="subline">B.S. in Cybersecurity and Business Administration (Finance), expected April 2028 · Dean's List</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
       <a class="btn" href="https://linkedin.com/in/sheshbudhabhatti">LinkedIn</a>
       <a class="btn" href="https://github.com/sheshbud/portfolio">GitHub</a>
       <a class="btn" href="mailto:sheshbudhabhatti@gmail.com">Email</a>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="wrap">
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Product Security Intern, Medtronic</h3>
+        <span class="entry-date">June 2026 to Present · Boston, MA</span>
+      </div>
+      <p>Designed, built, and evaluated an autonomous Wi-Fi resilience system for hospital-grade medical device networks (full write-up below). Analyzed wireless attack surfaces and developed developer security training.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>AI Student Ambassador and WICxDevSecOps Program Participant, Microsoft</h3>
+        <span class="entry-date">October 2025 to February 2026 · Boston, MA</span>
+      </div>
+      <p>Selected for security training on Azure DevSecOps pipelines, threat modeling, and AI model security protocols. Demoed Copilot/Omi AI to 100+ users, collecting structured feedback for product teams.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>R&amp;D Software Engineering Intern, Medtronic</h3>
+        <span class="entry-date">Summers 2024 and 2025 · North Haven, CT</span>
+      </div>
+      <p>Reduced test fixture calibration time by 37% through Python automation, saving 4+ hours weekly. Authored a fixture manual for cross-functional teams across the US and India. Implemented AES-256 and Blowfish encryption for the Signia™ Stapling System, meeting HIPAA compliance and passing an FDA cybersecurity audit.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Cybersecurity and Safety Researcher, Secure and Assured Intelligent Learning Lab</h3>
+        <span class="entry-date">June 2023 to February 2024 · New Haven, CT</span>
+      </div>
+      <p>Identified 8 security vulnerabilities in LLM systems through 50+ prompt injection attacks.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Summer Intern, Audit/Tax/Advisory Accounting, KPMG</h3>
+        <span class="entry-date">July to August 2023 · Hartford, CT</span>
+      </div>
+      <p>Collaborated across 5-person teams on 3 client engagements, identifying 2 key control weaknesses in inventory tracking. Analyzed financial data with Tableau to visualize audit-risk insight for senior stakeholders.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Founder, Executive Director, and TEDx Speaker, Gurls Chess Club Non-Profit</h3>
+        <span class="entry-date">December 2021 to Present · USA</span>
+      </div>
+      <p>Founded a chess non-profit coaching 200+ students (70% female); delivered 70+ lessons. Redesigned curriculum using retention data analysis, improving participant retention from 40% to 78%.</p>
     </div>
   </div>
 </section>
@@ -46,20 +100,20 @@
     <p>Connected medical devices are validated against interference in clean, controlled labs, but real hospitals are noisier and nothing keeps a device adapting once it's out in the field. This project asks three questions: what happens when other RF shows up, can it disrupt the link, and can a system catch that and re-route on its own? The result auto-senses trouble and re-routes itself, live, with zero manual input.</p>
 
     <h3 class="group-title">What I built</h3>
-    <p>Specced, wired, and assembled the entire testbed from scratch: a Raspberry Pi 5 as the access point, an ESP32 client reporting live metrics, additional ESP32s acting as interference generators, and an ALFA adapter independently monitoring all nearby Wi-Fi to separate real traffic from noise. On top of that hardware, I wrote a decision engine from scratch that fuses latency, jitter, packet loss, and signal strength into a single health score, with two safety mechanisms layered on top: a trend check that catches degradation early before the score even crosses "bad," and a guard that only switches channel or band if the alternative is genuinely better — reverting otherwise so it doesn't overreact to normal RF noise.</p>
+    <p>Specced, wired, and assembled the entire testbed from scratch: a Raspberry Pi 5 as the access point, an ESP32 client reporting live metrics, additional ESP32s acting as interference generators, and an ALFA adapter independently monitoring all nearby Wi-Fi to separate real traffic from noise. On top of that hardware, I wrote a decision engine from scratch that fuses latency, jitter, packet loss, and signal strength into a single health score, with two safety mechanisms layered on top: a trend check that catches degradation early before the score even crosses "bad," and a guard that only switches channel or band if the alternative is genuinely better, reverting otherwise so it doesn't overreact to normal RF noise.</p>
 
     <h3 class="group-title">Testing approach</h3>
-    <p>One variable at a time — baseline, distance, load, independent interference — with every sample logged the same way so runs are directly comparable. Load-tested up to 28 real clients and 600 packets/second; ran 20 hours on the busiest available channel to isolate congestion effects.</p>
+    <p>One variable at a time (baseline, distance, load, independent interference), with every sample logged the same way so runs are directly comparable. Load-tested up to 28 real clients and 600 packets/second; ran 20 hours on the busiest available channel to isolate congestion effects.</p>
 
     <h3 class="group-title">Findings</h3>
     <div class="card-grid">
       <div class="card card-static">
         <h4>Congestion isn't the threat</h4>
-        <p>Weak signal alone barely moved the health score. Scaling to 28 clients / 600 pps barely changed latency. Devices on one network take turns automatically — more traffic just means more polite waiting, not conflict.</p>
+        <p>Weak signal alone barely moved the health score. Scaling to 28 clients / 600 pps barely changed latency. Devices on one network take turns automatically. More traffic just means more polite waiting, not conflict.</p>
       </div>
       <div class="card card-static">
         <h4>Independent interference is</h4>
-        <p>Uncoordinated transmitters that don't take turns are what actually break the link. Going from 0 to 4 disruptors took latency from 3ms to 33ms — while packet loss stayed at zero the entire time.</p>
+        <p>Uncoordinated transmitters that don't take turns are what actually break the link. Going from 0 to 4 disruptors took latency from 3ms to 33ms, while packet loss stayed at zero the entire time.</p>
       </div>
       <div class="card card-static">
         <h4>Degradation compounds, non-linearly</h4>
@@ -72,68 +126,14 @@
     </div>
 
     <h3 class="group-title">The headline finding</h3>
-    <p>A link can look completely healthy — connected, strong signal — while latency and jitter are already climbing toward failure. Silent degradation, not disconnection, is the real risk for a security team to watch for. A strong signal is not a healthy link.</p>
+    <p>A link can look completely healthy (connected, strong signal) while latency and jitter are already climbing toward failure. Silent degradation, not disconnection, is the real risk for a security team to watch for. A strong signal is not a healthy link.</p>
 
     <h3 class="group-title">Also explored</h3>
-    <p>A decentralized variant using symmetric ESP-NOW firmware for direct device-to-device communication with no access point — it worked, boards found each other in seconds, though ESP-NOW's lack of a retry layer meant up to ~9% packet loss, pointing directly at the next research direction.</p>
+    <p>A decentralized variant using symmetric ESP-NOW firmware for direct device-to-device communication with no access point. It worked, boards found each other in seconds, though ESP-NOW's lack of a retry layer meant up to ~9% packet loss, pointing directly at the next research direction.</p>
   </div>
 </section>
 
-<section id="experience" class="section">
-  <div class="wrap">
-    <h2>Experience</h2>
-
-    <div class="entry">
-      <div class="entry-head">
-        <h3>Product Security Intern — Medtronic</h3>
-        <span class="entry-date">June 2026 – Present · Boston, MA</span>
-      </div>
-      <p>Designed, built, and evaluated an autonomous Wi-Fi resilience system for hospital-grade medical device networks (full write-up below). Analyzed wireless attack surfaces and developed developer security training.</p>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <h3>AI Student Ambassador &amp; WICxDevSecOps Program Participant — Microsoft</h3>
-        <span class="entry-date">Oct 2025 – Feb 2026 · Boston, MA</span>
-      </div>
-      <p>Selected for security training on Azure DevSecOps pipelines, threat modeling, and AI model security protocols. Demoed Copilot/Omi AI to 100+ users, collecting structured feedback for product teams.</p>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <h3>R&amp;D Software Engineering Intern — Medtronic</h3>
-        <span class="entry-date">Summers 2024 &amp; 2025 · North Haven, CT</span>
-      </div>
-      <p>Reduced test fixture calibration time by 37% through Python automation, saving 4+ hours weekly. Authored a fixture manual for cross-functional teams across the US and India. Implemented AES-256 and Blowfish encryption for the Signia™ Stapling System, meeting HIPAA compliance and passing an FDA cybersecurity audit.</p>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <h3>Cybersecurity &amp; Safety Researcher — Secure &amp; Assured Intelligent Learning Lab</h3>
-        <span class="entry-date">June 2023 – Feb 2024 · New Haven, CT</span>
-      </div>
-      <p>Identified 8 security vulnerabilities in LLM systems through 50+ prompt injection attacks.</p>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <h3>Summer Intern, Audit/Tax/Advisory Accounting — KPMG</h3>
-        <span class="entry-date">July – Aug 2023 · Hartford, CT</span>
-      </div>
-      <p>Collaborated across 5-person teams on 3 client engagements, identifying 2 key control weaknesses in inventory tracking. Analyzed financial data with Tableau to visualize audit-risk insight for senior stakeholders.</p>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <h3>Founder, Executive Director &amp; TEDx Speaker — Gurls Chess Club Non-Profit</h3>
-        <span class="entry-date">Dec 2021 – Present</span>
-      </div>
-      <p>Founded a chess non-profit coaching 200+ students (70% female); delivered 70+ lessons. Redesigned curriculum using retention data analysis, improving participant retention from 40% to 78%.</p>
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="section alt">
+<section id="projects" class="section">
   <div class="wrap">
     <h2>Projects</h2>
 
@@ -196,7 +196,7 @@
   </div>
 </section>
 
-<section id="security" class="section">
+<section id="security" class="section alt">
   <div class="wrap">
     <h2>Cybersecurity</h2>
     <div class="card-grid">
@@ -210,7 +210,7 @@
       </a>
       <a class="card" href="https://github.com/sheshbud/portfolio/blob/main/cryptography/README.md">
         <h4>Cryptography</h4>
-        <p>AES/Blowfish encryption, hash function security, digital signatures, secure key exchange — including the real-world Medtronic implementation.</p>
+        <p>AES/Blowfish encryption, hash function security, digital signatures, secure key exchange, including the real-world Medtronic implementation.</p>
       </a>
       <div class="card card-static">
         <h4>Bandit CTF Wargame</h4>
@@ -220,7 +220,7 @@
   </div>
 </section>
 
-<section id="skills" class="section alt">
+<section id="skills" class="section">
   <div class="wrap">
     <h2>Technical Skills</h2>
     <div class="skills-grid">
