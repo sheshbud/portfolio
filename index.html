@@ -13,8 +13,8 @@
   <div class="wrap">
     <span class="logo">Shesh Budhabhatti</span>
     <nav>
-      <a href="#experience">Experience</a>
       <a href="#featured">Featured</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#security">Security</a>
       <a href="#skills">Skills</a>
@@ -30,10 +30,52 @@
     <p class="tagline">Cybersecurity &amp; Software Engineering — Northeastern University</p>
     <p class="subline">B.S. in Cybersecurity and Business Administration (Finance), expected April 2028 · Dean's List</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://linkedin.com/in/sheshbudhabhatti">LinkedIn</a>
+      <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a class="btn" href="https://linkedin.com/in/sheshbudhabhatti">LinkedIn</a>
       <a class="btn" href="https://github.com/sheshbud/portfolio">GitHub</a>
       <a class="btn" href="mailto:sheshbudhabhatti@gmail.com">Email</a>
     </div>
+  </div>
+</section>
+
+<section id="featured" class="section alt">
+  <div class="wrap">
+    <h2>Featured: Adaptive Wi-Fi Resilience for Hospital Networks</h2>
+    <p class="featured-sub">Medtronic Product Security · Summer 2026 · Hardware + embedded systems research</p>
+
+    <p>Connected medical devices are validated against interference in clean, controlled labs, but real hospitals are noisier and nothing keeps a device adapting once it's out in the field. This project asks three questions: what happens when other RF shows up, can it disrupt the link, and can a system catch that and re-route on its own? The result auto-senses trouble and re-routes itself, live, with zero manual input.</p>
+
+    <h3 class="group-title">What I built</h3>
+    <p>Specced, wired, and assembled the entire testbed from scratch: a Raspberry Pi 5 as the access point, an ESP32 client reporting live metrics, additional ESP32s acting as interference generators, and an ALFA adapter independently monitoring all nearby Wi-Fi to separate real traffic from noise. On top of that hardware, I wrote a decision engine from scratch that fuses latency, jitter, packet loss, and signal strength into a single health score, with two safety mechanisms layered on top: a trend check that catches degradation early before the score even crosses "bad," and a guard that only switches channel or band if the alternative is genuinely better — reverting otherwise so it doesn't overreact to normal RF noise.</p>
+
+    <h3 class="group-title">Testing approach</h3>
+    <p>One variable at a time — baseline, distance, load, independent interference — with every sample logged the same way so runs are directly comparable. Load-tested up to 28 real clients and 600 packets/second; ran 20 hours on the busiest available channel to isolate congestion effects.</p>
+
+    <h3 class="group-title">Findings</h3>
+    <div class="card-grid">
+      <div class="card card-static">
+        <h4>Congestion isn't the threat</h4>
+        <p>Weak signal alone barely moved the health score. Scaling to 28 clients / 600 pps barely changed latency. Devices on one network take turns automatically — more traffic just means more polite waiting, not conflict.</p>
+      </div>
+      <div class="card card-static">
+        <h4>Independent interference is</h4>
+        <p>Uncoordinated transmitters that don't take turns are what actually break the link. Going from 0 to 4 disruptors took latency from 3ms to 33ms — while packet loss stayed at zero the entire time.</p>
+      </div>
+      <div class="card card-static">
+        <h4>Degradation compounds, non-linearly</h4>
+        <p>1→2 disruptors: +112% latency. 2→4 disruptors: +209% latency. Every additional uncoordinated transmitter collides with everyone already on the channel.</p>
+      </div>
+      <div class="card card-static">
+        <h4>Validated overnight, unattended</h4>
+        <p>With all 4 disruptors running, the engine detected 3 consecutive bad samples, switched itself from 2.4GHz to 5GHz with zero manual input, and held cleanly for ~10 hours.</p>
+      </div>
+    </div>
+
+    <h3 class="group-title">The headline finding</h3>
+    <p>A link can look completely healthy — connected, strong signal — while latency and jitter are already climbing toward failure. Silent degradation, not disconnection, is the real risk for a security team to watch for. A strong signal is not a healthy link.</p>
+
+    <h3 class="group-title">Also explored</h3>
+    <p>A decentralized variant using symmetric ESP-NOW firmware for direct device-to-device communication with no access point — it worked, boards found each other in seconds, though ESP-NOW's lack of a retry layer meant up to ~9% packet loss, pointing directly at the next research direction.</p>
   </div>
 </section>
 
@@ -91,48 +133,7 @@
   </div>
 </section>
 
-<section id="featured" class="section alt">
-  <div class="wrap">
-    <h2>Featured: Adaptive Wi-Fi Resilience for Hospital Networks</h2>
-    <p class="featured-sub">Medtronic Product Security · Summer 2026 · Hardware + embedded systems research</p>
-
-    <p>Connected medical devices are validated against interference in clean, controlled labs, but real hospitals are noisier and nothing keeps a device adapting once it's out in the field. This project asks three questions: what happens when other RF shows up, can it disrupt the link, and can a system catch that and re-route on its own? The result auto-senses trouble and re-routes itself, live, with zero manual input.</p>
-
-    <h3 class="group-title">What I built</h3>
-    <p>Specced, wired, and assembled the entire testbed from scratch: a Raspberry Pi 5 as the access point, an ESP32 client reporting live metrics, additional ESP32s acting as interference generators, and an ALFA adapter independently monitoring all nearby Wi-Fi to separate real traffic from noise. On top of that hardware, I wrote a decision engine from scratch that fuses latency, jitter, packet loss, and signal strength into a single health score, with two safety mechanisms layered on top: a trend check that catches degradation early before the score even crosses "bad," and a guard that only switches channel or band if the alternative is genuinely better — reverting otherwise so it doesn't overreact to normal RF noise.</p>
-
-    <h3 class="group-title">Testing approach</h3>
-    <p>One variable at a time — baseline, distance, load, independent interference — with every sample logged the same way so runs are directly comparable. Load-tested up to 28 real clients and 600 packets/second; ran 20 hours on the busiest available channel to isolate congestion effects.</p>
-
-    <h3 class="group-title">Findings</h3>
-    <div class="card-grid">
-      <div class="card card-static">
-        <h4>Congestion isn't the threat</h4>
-        <p>Weak signal alone barely moved the health score. Scaling to 28 clients / 600 pps barely changed latency. Devices on one network take turns automatically — more traffic just means more polite waiting, not conflict.</p>
-      </div>
-      <div class="card card-static">
-        <h4>Independent interference is</h4>
-        <p>Uncoordinated transmitters that don't take turns are what actually break the link. Going from 0 to 4 disruptors took latency from 3ms to 33ms — while packet loss stayed at zero the entire time.</p>
-      </div>
-      <div class="card card-static">
-        <h4>Degradation compounds, non-linearly</h4>
-        <p>1→2 disruptors: +112% latency. 2→4 disruptors: +209% latency. Every additional uncoordinated transmitter collides with everyone already on the channel.</p>
-      </div>
-      <div class="card card-static">
-        <h4>Validated overnight, unattended</h4>
-        <p>With all 4 disruptors running, the engine detected 3 consecutive bad samples, switched itself from 2.4GHz to 5GHz with zero manual input, and held cleanly for ~10 hours.</p>
-      </div>
-    </div>
-
-    <h3 class="group-title">The headline finding</h3>
-    <p>A link can look completely healthy — connected, strong signal — while latency and jitter are already climbing toward failure. Silent degradation, not disconnection, is the real risk for a security team to watch for. A strong signal is not a healthy link.</p>
-
-    <h3 class="group-title">Also explored</h3>
-    <p>A decentralized variant using symmetric ESP-NOW firmware for direct device-to-device communication with no access point — it worked, boards found each other in seconds, though ESP-NOW's lack of a retry layer meant up to ~9% packet loss, pointing directly at the next research direction.</p>
-  </div>
-</section>
-
-<section id="projects" class="section">
+<section id="projects" class="section alt">
   <div class="wrap">
     <h2>Projects</h2>
 
@@ -205,7 +206,7 @@
   </div>
 </section>
 
-<section id="security" class="section alt">
+<section id="security" class="section">
   <div class="wrap">
     <h2>Cybersecurity</h2>
     <div class="card-grid">
@@ -229,7 +230,7 @@
   </div>
 </section>
 
-<section id="skills" class="section">
+<section id="skills" class="section alt">
   <div class="wrap">
     <h2>Technical Skills</h2>
     <div class="skills-grid">
@@ -254,6 +255,7 @@
     <h2>Get in touch</h2>
     <div class="cta-row">
       <a class="btn btn-primary" href="mailto:sheshbudhabhatti@gmail.com">sheshbudhabhatti@gmail.com</a>
+      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
       <a class="btn" href="https://linkedin.com/in/sheshbudhabhatti">LinkedIn</a>
       <a class="btn" href="https://github.com/sheshbud/portfolio">GitHub</a>
     </div>

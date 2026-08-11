@@ -58,6 +58,8 @@ h3.group-title { font-size: 1.05rem; color: var(--ink-soft); text-transform: upp
   font-size: 0.92rem;
 }
 .site-header nav a:hover { color: var(--accent); text-decoration: none; }
+.site-header nav a.active { color: var(--accent); }
+.site-header .logo { text-decoration: none; }
 
 .hero {
   padding: 72px 0 56px;
