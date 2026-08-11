@@ -69,8 +69,6 @@ Connected medical devices are validated against interference in clean, controlle
 ## Software Engineering Projects
 
 - **[CookYourBooks](https://github.com/sheshbud/cookyourbooks)** — Recipe management app in Java: unit conversion (metric/imperial + ingredient-specific density conversions), recipe scaling, and an interactive CLI. (CS3100 Program Design & Implementation)
-- **LightEmAll** (Java, Fundamentals of Computer Science 2) — Tile-rotation puzzle game simulating a power grid; implemented breadth-first search for power flow, Kruskal's algorithm for minimum spanning trees, and union-find for connectivity.
-- **ZType** (Java, Fundamentals of Computer Science 2) — Real-time typing game with object-oriented design for enemies/projectiles/scoring, collision detection, and dynamic difficulty scaling.
 
 ## Side Projects
 
