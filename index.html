@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shesh Budhabhatti — Cybersecurity & Software Engineering</title>
+<meta name="description" content="Portfolio of Shesh Budhabhatti — Cybersecurity and Business Administration, Northeastern University.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="logo">Shesh Budhabhatti</span>
+    <nav>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#security">Security</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Shesh Budhabhatti</h1>
+    <p class="tagline">Cybersecurity &amp; Software Engineering — Northeastern University</p>
+    <p class="subline">B.S. in Cybersecurity and Business Administration (Finance), expected April 2028 · Dean's List · GPA 3.333, trending up</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://linkedin.com/in/sheshbudhabhatti">LinkedIn</a>
+      <a class="btn" href="https://github.com/sheshbud">GitHub</a>
+      <a class="btn" href="mailto:sheshbudhabhatti@gmail.com">Email</a>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="wrap">
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Product Security Intern — Medtronic</h3>
+        <span class="entry-date">June 2026 – Present · Boston, MA</span>
+      </div>
+      <p>Built Python tooling to capture and visualize WiFi packet loss across 2.4/5 GHz bands for medical device security research. Analyzed wireless attack surfaces and developed developer security training.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>AI Student Ambassador &amp; WICxDevSecOps Program Participant — Microsoft</h3>
+        <span class="entry-date">Oct 2025 – Feb 2026 · Boston, MA</span>
+      </div>
+      <p>Selected for security training on Azure DevSecOps pipelines, threat modeling, and AI model security protocols. Demoed Copilot/Omi AI to 100+ users, collecting structured feedback for product teams.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>R&amp;D Software Engineering Intern — Medtronic</h3>
+        <span class="entry-date">Summers 2024 &amp; 2025 · North Haven, CT</span>
+      </div>
+      <p>Reduced test fixture calibration time by 37% through Python automation, saving 4+ hours weekly. Authored a fixture manual for cross-functional teams across the US and India. Implemented AES-256 and Blowfish encryption for the Signia™ Stapling System, meeting HIPAA compliance and passing an FDA cybersecurity audit.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Cybersecurity &amp; Safety Researcher — Secure &amp; Assured Intelligent Learning Lab</h3>
+        <span class="entry-date">June 2023 – Feb 2024 · New Haven, CT</span>
+      </div>
+      <p>Identified 8 security vulnerabilities in LLM systems through 50+ prompt injection attacks.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Summer Intern, Audit/Tax/Advisory Accounting — KPMG</h3>
+        <span class="entry-date">July – Aug 2023 · Hartford, CT</span>
+      </div>
+      <p>Collaborated across 5-person teams on 3 client engagements, identifying 2 key control weaknesses in inventory tracking. Analyzed financial data with Tableau to visualize audit-risk insight for senior stakeholders.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Founder, Executive Director &amp; TEDx Speaker — Gurls Chess Club Non-Profit</h3>
+        <span class="entry-date">Dec 2021 – Present</span>
+      </div>
+      <p>Founded a chess non-profit coaching 200+ students (70% female); delivered 70+ lessons. Redesigned curriculum using retention data analysis, improving participant retention from 40% to 78%.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section alt">
+  <div class="wrap">
+    <h2>Projects</h2>
+
+    <h3 class="group-title">Systems &amp; Networking</h3>
+    <div class="card-grid">
+      <a class="card" href="https://github.com/sheshbud/memory-allocator">
+        <h4>Memory Allocator</h4>
+        <p>C allocator using <code>mmap</code>/<code>munmap</code>, a sorted coalescing free list, and first-fit allocation to minimize fragmentation.</p>
+        <span class="card-tag">CS3650 Computer Systems</span>
+      </a>
+      <a class="card" href="https://github.com/sheshbud/basic-memory-allocator">
+        <h4>Basic Memory Allocator</h4>
+        <p>Earlier <code>sbrk</code>-based allocator with free-list management, precursor to the mmap-based version above.</p>
+        <span class="card-tag">CS3650 Computer Systems</span>
+      </a>
+      <a class="card" href="https://github.com/sheshbud/ftp-client">
+        <h4>FTP Client</h4>
+        <p>Built from raw Python sockets: PASV mode parsing, control/data channel handling, six file operations.</p>
+        <span class="card-tag">CS4700 Network Fundamentals</span>
+      </a>
+      <a class="card" href="https://github.com/sheshbud/fakebook-web-crawler">
+        <h4>Fakebook Web Crawler</h4>
+        <p>Web crawler over raw TLS sockets with manual HTTP/1.1 handling: CSRF tokens, cookies, chunked transfer encoding.</p>
+        <span class="card-tag">CY2550 Foundations of Cybersecurity</span>
+      </a>
+    </div>
+
+    <h3 class="group-title">Software Engineering</h3>
+    <div class="card-grid">
+      <a class="card" href="https://github.com/sheshbud/cookyourbooks">
+        <h4>CookYourBooks</h4>
+        <p>Recipe management app in Java: unit conversion, ingredient-specific density conversions, recipe scaling, interactive CLI.</p>
+        <span class="card-tag">CS3100 Program Design &amp; Implementation</span>
+      </a>
+      <div class="card card-static">
+        <h4>LightEmAll</h4>
+        <p>Tile-rotation puzzle game simulating a power grid. Breadth-first search for power flow, Kruskal's algorithm for minimum spanning trees, union-find for connectivity.</p>
+        <span class="card-tag">Fundamentals of Computer Science 2 · Java</span>
+      </div>
+      <div class="card card-static">
+        <h4>ZType</h4>
+        <p>Real-time typing game: object-oriented design for enemies/projectiles/scoring, collision detection, dynamic difficulty scaling.</p>
+        <span class="card-tag">Fundamentals of Computer Science 2 · Java</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="security" class="section">
+  <div class="wrap">
+    <h2>Cybersecurity</h2>
+    <div class="card-grid">
+      <a class="card" href="https://github.com/sheshbud/portfolio/blob/main/ctf-challenges/README.md">
+        <h4>CTF Challenges</h4>
+        <p>Multi-level challenges: HTML/JS inspection, steganography, cron job privilege escalation, broken access control, authentication bypass, vulnerability chaining.</p>
+      </a>
+      <a class="card" href="https://github.com/sheshbud/portfolio/blob/main/password-cracking/README.md">
+        <h4>Password Cracking</h4>
+        <p>Cracked 50+ passwords from simulated Linux shadow files using John the Ripper and Hashcat: rule-based, mask, and hash analysis attacks.</p>
+      </a>
+      <a class="card" href="https://github.com/sheshbud/portfolio/blob/main/cryptography/README.md">
+        <h4>Cryptography</h4>
+        <p>AES/Blowfish encryption, hash function security, digital signatures, secure key exchange — including the real-world Medtronic implementation.</p>
+      </a>
+      <div class="card card-static">
+        <h4>Bandit CTF Wargame</h4>
+        <p>Completed OverTheWire Bandit levels: Linux navigation, file permissions, SSH, basic binary analysis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section alt">
+  <div class="wrap">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div>
+        <h4>Languages</h4>
+        <p>Python, Java, C, C++, JavaScript, SQL, Assembly</p>
+      </div>
+      <div>
+        <h4>Systems &amp; Tools</h4>
+        <p>Git/GitHub, Linux/Unix, Docker, GDB, Valgrind, Azure DevSecOps</p>
+      </div>
+      <div>
+        <h4>Security</h4>
+        <p>Wireshark, Metasploit, Hashcat, threat modeling, penetration testing, cryptographic protocols</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="site-footer">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:sheshbudhabhatti@gmail.com">sheshbudhabhatti@gmail.com</a>
+      <a class="btn" href="https://linkedin.com/in/sheshbudhabhatti">LinkedIn</a>
+      <a class="btn" href="https://github.com/sheshbud">GitHub</a>
+    </div>
+    <p class="fine-print">TEDx Speaker (2023) · Lean Six Sigma Yellow Belt (2024) · CT Women's Chess Champion (2018)</p>
+  </div>
+</footer>
+
+</body>
+</html>
