@@ -1,8 +1,10 @@
 # Shesh Budhabhatti
 
+**Live site: [sheshbud.github.io/portfolio](https://sheshbud.github.io/portfolio/)**
+
 Cybersecurity & Software Engineering | Northeastern University, Khoury College of Computer Sciences
 
-B.S. in Cybersecurity and Business Administration (Finance concentration), expected April 2028. Dean's List (Fall 2025, Spring 2026), cumulative GPA 3.333, trending up (3.833 most recent term).
+B.S. in Cybersecurity and Business Administration (Finance concentration), expected April 2028. Dean's List (Fall 2025, Spring 2026).
 
 - **LinkedIn:** [linkedin.com/in/sheshbudhabhatti](https://linkedin.com/in/sheshbudhabhatti)
 - **Email:** sheshbudhabhatti@gmail.com
