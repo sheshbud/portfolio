@@ -40,6 +40,7 @@ Founded a chess non-profit coaching 200+ students (70% female); delivered 70+ le
 - **[Basic Memory Allocator](https://github.com/sheshbud/basic-memory-allocator)** — Earlier `sbrk`-based version of the above, for comparison. (CS3650 Computer Systems)
 - **[FTP Client](https://github.com/sheshbud/ftp-client)** — FTP client built from raw Python sockets: PASV mode parsing, control/data channel handling, six operations (ls/mkdir/rmdir/rm/cp/mv). (CS4700 Network Fundamentals)
 - **[Fakebook Web Crawler](https://github.com/sheshbud/fakebook-web-crawler)** — Web crawler over raw TLS sockets with manual HTTP/1.1 handling: CSRF token extraction, cookie-based sessions, chunked transfer encoding, BFS-based crawling. (CY2550 Foundations of Cybersecurity)
+- **[BGP Router](https://github.com/sheshbud/bgp-router)** — BGP router in Python: route aggregation, longest-prefix-match forwarding with a full tie-breaking chain, handshake/update/withdrawal handling, all IP address bit-math written from scratch. (CS4700 Network Fundamentals)
 
 ## Software Engineering Projects
 
