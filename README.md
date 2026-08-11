@@ -16,22 +16,22 @@ B.S. in Cybersecurity and Business Administration (Finance concentration), expec
 
 ## Experience
 
-**Medtronic**, Product Security Intern (June 2026 to Present), Boston, MA
+**Product Security Intern - Medtronic** (June 2026 to Present), Boston, MA
 Designed, built, and evaluated an autonomous Wi-Fi resilience system for hospital-grade medical device networks (full write-up below); analyzed wireless attack surfaces and developed developer security training.
 
-**Microsoft**, AI Student Ambassador & WICxDevSecOps Program Participant (October 2025 to February 2026), Boston, MA
+**AI Student Ambassador and WICxDevSecOps Program Participant - Microsoft** (October 2025 to February 2026), Boston, MA
 Selected for security training on Azure DevSecOps pipelines, threat modeling, and AI model security protocols; demoed Copilot/Omi AI to 100+ users, collecting structured feedback for product teams.
 
-**Medtronic**, R&D Software Engineering Intern (Summers 2024 and 2025), North Haven, CT
+**R&D Software Engineering Intern - Medtronic** (Summers 2024 and 2025), North Haven, CT
 Reduced test fixture calibration time by 37% through Python automation; authored a fixture manual for cross-functional teams across the US and India; implemented AES-256 and Blowfish encryption for the Signia™ Stapling System to meet HIPAA compliance and pass an FDA cybersecurity audit.
 
-**Secure & Assured Intelligent Learning Lab**, Cybersecurity & Safety Researcher (June 2023 to February 2024), New Haven, CT
+**Cybersecurity and Safety Researcher - Secure and Assured Intelligent Learning Lab** (June 2023 to February 2024), New Haven, CT
 Identified 8 security vulnerabilities in LLM systems through 50+ prompt injection attacks.
 
-**KPMG**, Summer Intern, Audit/Tax/Advisory Accounting (July to August 2023), Hartford, CT
+**Summer Intern, Audit/Tax/Advisory Accounting - KPMG** (July to August 2023), Hartford, CT
 Collaborated across 5-person teams on 3 client engagements, identifying 2 key control weaknesses in inventory tracking; analyzed financial data with Tableau to visualize audit-risk insight for senior stakeholders.
 
-**Gurls Chess Club Non-Profit**, Founder, Executive Director & TEDx Speaker (December 2021 to Present), USA
+**Founder, Executive Director, and TEDx Speaker - Gurls Chess Club Non-Profit** (December 2021 to Present), USA
 Founded a chess non-profit coaching 200+ students (70% female); delivered 70+ lessons; redesigned curriculum using retention data analysis, improving participant retention from 40% to 78%.
 
 ---
