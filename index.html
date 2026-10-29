@@ -235,11 +235,11 @@
         <p>Blind penetration test of a proprietary marketplace application, automated tooling prohibited. Exploited broken access control by tampering a role parameter to escalate a buyer account to seller, forging authenticated POST requests with valid CSRF tokens, plus SQL injection and stored XSS to act as another user.</p>
         <span class="card-tag">CY3740 Systems Security</span>
       </div>
-      <div class="card card-static">
+      <a class="card" href="https://github.com/sheshbud/snapcal-backend/tree/main/semgrep-rules">
         <h4>Sylla Security Review</h4>
         <p>Manual data-flow review of a serverless API found model-generated output (a calendar name and an echoed error message) reaching the client unsanitized. Fixed both, then encoded the pattern as a custom Semgrep taint rule with ruleid/ok test cases running in GitHub Actions on every push.</p>
         <span class="card-tag">Semgrep · SAST · taint analysis</span>
-      </div>
+      </a>
       <div class="card card-static">
         <h4>Bandit CTF Wargame</h4>
         <p>Completed OverTheWire Bandit challenges across five levels: Linux permissions, SUID, and switching between users.</p>
